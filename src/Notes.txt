@@ -1,0 +1,13 @@
+Content.tsx : This protected page displays songs by the artist, accessible only to users who meet specific streaming criteria.
+
+Navbar.tsx : Component that defines the structure and functionality of our website's navigation bar.
+
+PageNotFound.tsx : Redirects users to the home page if they attempt to access a non-existent page.
+
+Profile.tsx : Showcases the artist's profile to the audience.
+
+SongCard.tsx : A component responsible for displaying individual song details.
+
+SubscribeButton.tsx : Manages the functionality of the subscribe button, enabling users to subscribe.
+
+UnsubscribeButton.tsx: Controls the functionality of the unsubscribe button, allowing users to cancel their subscriptions.
