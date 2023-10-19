@@ -135,7 +135,7 @@ function App() {
       }, [])
 
       return (
-        <div className="App bg-[#F4EEE0] min-h-screen">
+        <div className="App bg-[#03001C] min-h-screen">
           <Navbar />
           <Profile />
           <Routes>

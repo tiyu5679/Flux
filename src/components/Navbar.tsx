@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <div className="navbar-container flex justify-between py-5 border-b-2 border-[#331D2C]">
         <div className="logo-container ml-5">
-            <h1 className='text-3xl font-bold text-[#331D2C]'>Indie Haven</h1>
+            <h1 className='text-3xl font-bold text-white'>FLUX</h1>
         </div>
         <div className="wallet-container mr-5">
             {

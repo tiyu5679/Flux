@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: black;
+    color: #ffffff;
+  }
+  
+  .center-max-size {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+  
+  
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    text-transform: uppercase;
+  }
+  
+  .poster {
+    background-size: cover;
+    background-position: top center;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 50px;
+    position: relative;
+  }
+  
+  .h1t{
+    margin-left: 5px;
+    color: Green;
+  }
+  
+  .poster-content {
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 92px;
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  
+  .container {
+   
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: grid;
+    margin-left: 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    gap: 70px;
+  }
+  
+  
+  .button {
+    margin: 20px 0;
+    background: #0F1014;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid gray;
+  }
+  
+  .button:hover {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  }
+  
+  .close-video {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .youtube-container-amru {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .brand {
+    font-weight: bold;
+  }
+  
+  /*-- MOVIE */
+  
+  .movie {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .movie img {
+    height: 245px;
+    max-width: 320px;
+  }
+  
+  .movie-infos {
+    padding: 15px 0;
+  }
+  
+  .movie-title {
+    margin: 0;
+  }
+  
+  .movie-voting {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #0F1014;
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 25px;
+  }
+  
+  /** SEARCH **/
+  .form {
+    position: relative;
+  }
+  
+  .search {
+    border: 1px solid darkslategray;
+    outline: transparent;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: white;
+  
+  }
+  
+  .submit-search {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: transparent;
+    color:  white;
+    border: none;
+    cursor: pointer;
+  }
