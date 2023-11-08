@@ -1,0 +1,41 @@
+.Navigation{
+    display: flex;
+    background-color: black;
+}
+.logg{
+    cursor: pointer;
+    background-color: black;
+    font-size: 18px;
+    margin-left: 70px;
+    color: white;
+    border-radius: 10px;
+   
+}
+.signn{
+    cursor: pointer;
+    background-color: green;
+    padding: 5px;
+    font-size: 18px;
+    margin-left: 15px;
+    color: white;
+    border-radius: 10px;
+    
+}
+.heading{
+    color: green;
+    font-size: 55px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.logoutbtn{
+    cursor: pointer;
+    background-color: green;
+    padding: 5px;
+    font-size: 24px;
+    margin-left: 1225px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+}

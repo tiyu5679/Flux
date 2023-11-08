@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Movie = ({movie, selectMovie}) => {
+const Movie = ({movie, selectMovie}) => 
+{
     const IMAGE_PATH = "https://image.tmdb.org/t/p/w342"
 
     return (

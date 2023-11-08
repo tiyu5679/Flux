@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Movie from "../../components/Movie";
+import Movie from "./Movie";
 import Youtube from "react-youtube";
-import Navbar from "../../components/Navbar/Navbar";
 import './Homepage.css';
 
 function Homepage() 

@@ -1,6 +1,7 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
 import './Homepage.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // Import everything needed to use the `useQuery` hook
 import { useQuery, gql } from "@apollo/client";
@@ -12,10 +13,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Movie from './Movie'
 import Youtube from "react-youtube";
-import {UnsubscribeButton} from './UnsubscribeButton';
+import Footer from './Footer';
 
 
-export const Profile = () => {
+export const Profile = () => 
+{
   const MOVIE_API = "https://api.themoviedb.org/3/";
   const SEARCH_API = MOVIE_API + "search/movie";
   const DISCOVER_API = MOVIE_API + "discover/movie";
@@ -28,11 +30,13 @@ export const Profile = () => {
   const [movies, setMovies] = useState([]);
   const [movie, setMovie] = useState({ title: "Loading Movies" });
 
-  useEffect(() => {
+  useEffect(() => 
+  {
     fetchMovies();
   }, []);
 
-  const fetchMovies = async (event) => {
+  const fetchMovies = async (event) => 
+  {
     if (event) {
       event.preventDefault();
     }
@@ -74,7 +78,8 @@ export const Profile = () => {
     setMovie(data);
   };
 
-  const selectMovie = (movie) => {
+  const selectMovie = (movie) => 
+  {
     fetchMovie(movie.id);
     setPlaying(false);
     setMovie(movie);
@@ -153,6 +158,8 @@ export const Profile = () => {
       ) : (
         "Sorry, no movies found"
       )}
+      <Footer/>
     </div>
   );
   }
+export default Profile;

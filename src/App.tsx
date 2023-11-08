@@ -23,6 +23,13 @@ import { PrivateContent } from "./utils/PrivateContent";
 import { addAccount } from "./features/HandleAccount";
 import { provideAccess, revokeAcess } from "./features/HandleSubscription";
 import PageNotFound from "./components/PageNotFound";
+import React from "react";
+import { BrowserRouter, } from "react-router-dom";
+import { AuthContextProvider } from "./context/AuthContext";
+import Footer from "./components/Footer";
+import Signup from "./Signup/Signup";
+import Login from "./Login/Login";
+import Homepage from "./components/Homepage";
 
 const getFlowRate = async (account) => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -136,21 +143,31 @@ function App() {
 
       return (
         <div className="App bg-[#03001C] min-h-screen">
-          <Navbar />
-          <Profile />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <PrivateContent>
-                  <Content />
-                </PrivateContent>
-              }
-            />
-            <Route path="*" element={<PageNotFound/>} />
-          </Routes>
+           <AuthContextProvider>
+    <Navbar/>
+      <Routes>
+      <Route path='/' element={<Signup/>}/>
+      <Route path='/login' element={<Login/>}></Route>
+      <Route path='/Profile' element={<Profile/>}></Route>
+      </Routes>
+    </AuthContextProvider>
         </div>
       );
     }
     
     export default App;
+   
+
+    // <Navbar />
+    //       <Profile />
+    //       <Routes>
+    //         <Route
+    //           path="/"
+    //           element={
+    //             <PrivateContent>
+    //               <Content />
+    //             </PrivateContent>
+    //           }
+    //         />
+    //         <Route path="*" element={<PageNotFound/>} />
+    //       </Routes>

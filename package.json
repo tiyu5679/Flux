@@ -19,6 +19,7 @@
     "@web3modal/react": "^2.7.1",
     "axios": "^1.5.1",
     "ethers": "^5.7.2",
+    "firebase": "^10.5.2",
     "graphql": "^16.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
