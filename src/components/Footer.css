@@ -1,9 +1,10 @@
-.footer {
+.footer 
+{
     background: #1a1e2a;
     /* position: fixed; */
     /* bottom: 0; */
     width: 100%;
-  }
+}
   
   .footer-info {
     color: #fff;

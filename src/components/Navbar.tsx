@@ -4,7 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import './Navbar.css';
 import { UserAuth } from '../context/AuthContext';
 
-export const Navbar = () => {
+export const Navbar = () => 
+{
     const HandleAccount = useSelector((state) => state.account.value)
     console.log(`Connected to ${HandleAccount}`);
 

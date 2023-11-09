@@ -32,12 +32,14 @@ export const Profile = () =>
 
   useEffect(() => 
   {
-    fetchMovies();
+    fetchMovies(event);
   }, []);
 
-  const fetchMovies = async (event) => 
+  // Searching block for movies
+  const fetchMovies = async (event: Event | undefined) => 
   {
-    if (event) {
+    if (event) 
+    {
       event.preventDefault();
     }
 
@@ -60,7 +62,9 @@ export const Profile = () =>
     }
   };
 
-  const fetchMovie = async (id) => {
+  // Fetch movie and display it on screen.
+  const fetchMovie = async (id: any) => 
+  {
     const { data } = await axios.get(`${MOVIE_API}movie/${id}`, {
       params: {
         api_key: API_KEY,
@@ -68,6 +72,7 @@ export const Profile = () =>
       },
     });
 
+    // Fetching trailers from youtube.
     if (data.videos && data.videos.results) {
       const trailer = data.videos.results.find(
         (vid) => vid.name === "Official Trailer"
@@ -78,6 +83,7 @@ export const Profile = () =>
     setMovie(data);
   };
 
+  // select the movie and display it on the top of the screen.
   const selectMovie = (movie) => 
   {
     fetchMovie(movie.id);
@@ -111,7 +117,7 @@ export const Profile = () =>
                     containerClassName="youtube-container-amru"
                     opts={{
                       width: "1260px",
-                      height: "600px",
+                      height: "570px",
                       playerVars: {
                         autoplay: 1,
                         controls: 0,

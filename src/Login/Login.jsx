@@ -3,20 +3,26 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/Authcontext';
 import './Login.css';
 
-const Login = () => {
+const Login = () => 
+{
   const [email,setEmail] = useState('');
   const [password, setPassword] = useState('')
   const [error, SetError] = useState('')
+  // UserAuth.
   const {user, LogIn} = UserAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) =>{
+  const handleSubmit = async (e) =>
+  {
     e.preventDefault()
     SetError('')
-    try{
+    try
+    {
       await LogIn(email,password)
       navigate('/Profile')
-    }catch(error){
+    }
+    catch(error)
+    {
       console.log(error)
       SetError('Invalid Username or password')
     }
@@ -41,13 +47,12 @@ const Login = () => {
         <p><input className='cb1' type="checkbox"/>Remeber Me</p>
         <p className='cb2'>Need Help?</p>
         </div>
-        
       </div>
 
       <p className='lastline'><span className=''>
       New To FluxV1?  
       </span>{' '}
-      <Link to='/' className='hov'> Sign Up</Link>
+      <Link to='/' className='hov'>Sign Up</Link>
       </p>
       </form>
       

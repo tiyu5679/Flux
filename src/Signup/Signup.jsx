@@ -18,6 +18,7 @@ const Signup = () => {
     }catch(error)
     {
       console.log("Invalid Username or password")
+      setError('Invalid Entry of any one or both data')
     }
   }
   return (
